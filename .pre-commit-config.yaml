@@ -13,6 +13,6 @@ repos:
     rev: v0.8.1
     hooks:
       - id: ruff
-        entry: make lint
+        entry: ruff check --fix .
       - id: ruff-format
-        entry: make format
+        entry: ruff format --check .
