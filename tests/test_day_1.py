@@ -1,4 +1,5 @@
 from solutions.day_1 import sum_calibration_values, sum_calibration_values2
+import os
 
 
 def test_sum_calibration_values():
