@@ -1,3 +1,6 @@
+
+.PHONY: generate_day
+
 test:
 	@poetry run pytest
 
@@ -6,3 +9,6 @@ lint:
 
 format:
 	@poetry run ruff format .
+
+generate_day:
+	@poetry run python utils/generate_day.py
