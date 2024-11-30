@@ -89,6 +89,9 @@ make generate_day
 ```
 This runs the `utils/generate_day.py` script to create the necessary files.
 
+#### Progress Updates
+This project utilizes a pre-commit hook to update the Progress section of this readme that is triggered by a commit pushed with message `Completed Day {puzzle_day_number} Part {part}`.
+
 ---
 
 ### 🧪 Testing and Linting
