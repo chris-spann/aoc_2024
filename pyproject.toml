@@ -47,6 +47,12 @@ omit = [
     "*/__init__.py",
     "*/utils/*"
 ]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+exclude = ["templates", "utils"]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
