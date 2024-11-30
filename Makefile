@@ -9,6 +9,9 @@ lint:
 format:
 	@poetry run ruff format .
 
+typecheck:
+	@poetry run pyright
+
 generate_day:
 	@poetry run python utils/generate_day.py
 
