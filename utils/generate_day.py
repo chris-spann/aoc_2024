@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from config import Config
+from models.config import Config
 
 config = Config()
 

@@ -45,7 +45,7 @@ norecursedirs = ["templates"]
 [tool.coverage.run]
 omit = [
     "*/__init__.py",
-    "*/*template.py"
+    "*/utils/*"
 ]
 [build-system]
 requires = ["poetry-core"]
