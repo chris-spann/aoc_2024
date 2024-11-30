@@ -8,7 +8,7 @@ config = Config()
 def create_file_from_template(template_path, new_file_path, day):
     with open(template_path) as template_file:
         content = template_file.read()
-    content = content.replace("template", f"day_{day}")
+    content = content.replace("template", f"day_{day}").replace("solution_", "")
     with open(new_file_path, "w") as new_file:
         new_file.write(content)
 
@@ -33,7 +33,7 @@ def main():
         return
 
     solution_file = config.solutions_dir / f"day_{day}.py"
-    test_file = config.tests_dir / f"test_day_{day}.py"
+    test_file = config.tests_dir / f"solutions/test_day_{day}.py"
     instructions_file = config.instructions_dir / f"day_{day}.txt"
 
     if not solution_file.exists():
