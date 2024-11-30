@@ -26,3 +26,4 @@ class Config(BaseModel):
         default_factory=lambda: Path(__file__).resolve().parent.parent.parent / "solutions"
     )
     tests_dir: Path = Field(default_factory=lambda: Path(__file__).resolve().parent.parent.parent / "tests")
+    readme: Path = Field(default_factory=lambda: Path(__file__).resolve().parent.parent.parent / "README.md")

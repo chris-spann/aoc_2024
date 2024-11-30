@@ -25,7 +25,7 @@ def scrape_instructions(day):
 
 
 def main():
-    day = input("Enter the puzzle day (X, integer): ")
+    day = input("Enter the puzzle day number: ")
     try:
         day = int(day)
     except ValueError:

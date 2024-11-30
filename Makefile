@@ -1,4 +1,3 @@
-
 .PHONY: generate_day run_day update_progress
 
 test:
