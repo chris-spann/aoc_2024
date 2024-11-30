@@ -1,6 +1,6 @@
 ci:
   autofix_prs: true
-  skip: [post-commit-action]
+  skip: [post-commit-action, pyright]
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
@@ -15,6 +15,10 @@ repos:
       - id: ruff
         args: [ --fix ]
       - id: ruff-format
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.389
+    hooks:
+    - id: pyright
   - repo: local
     hooks:
       - id: post-commit-action
