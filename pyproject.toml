@@ -11,6 +11,7 @@ python = "^3.11"
 requests = "^2.32.3"
 beautifulsoup4 = "^4.12.3"
 pydantic = "^2.10.2"
+pyright = {extras = ["nodejs"], version = "^1.1.389"}
 
 [tool.poetry.group.dev.dependencies]
 pytest-cov = "^6.0.0"
@@ -47,6 +48,12 @@ omit = [
     "*/__init__.py",
     "*/utils/*"
 ]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+exclude = ["templates", "utils"]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

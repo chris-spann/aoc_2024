@@ -76,8 +76,8 @@ This project includes a Makefile with the following commands:
 | make test      | Run the test suite using pytest. |
 | make lint      | Run code linting and autofix issues with ruff.|
 | make format    | Auto-format the codebase using ruff. |
+| make typecheck | Typechecking with pyright. |
 | make generate_day | Generate boilerplate code for a new day.|
-| make format    | Auto-format the codebase using ruff. |
 | make run_day day=X    | Run the solution for a specific day. |
 | make update_progress | Update progress in README.md |
 
