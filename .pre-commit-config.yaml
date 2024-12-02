@@ -25,5 +25,5 @@ repos:
       - id: post-commit-action
         name: Update Progress in README
         language: system
-        entry: bash -c 'make update_progress && git status --porcelain | grep -q "README.md" && git add README.md'
+        entry: bash -c 'if [ "$CI" != "true" ]; then make update_progress && git status --porcelain | grep -q "README.md" && git add README.md; else echo "Skipping post-commit hook due to CI environment."; fi'
         pass_filenames: false

@@ -6,10 +6,35 @@ Welcome to Advent of Code 2024! This repository contains my solutions to the dai
 
 ### 📊 Progress
 
-
 | Day | Part 1 | Part 2 |
 | :----: | :----: | :----: |
-|    1   |   ✅   |   ❌   |
+| 1     |   ✅   |   ✅   |
+| 2     |   ❌   |   ❌   |
+| 3     |   ❌   |   ❌   |
+| 4     |   ❌   |   ❌   |
+| 5     |   ❌   |   ❌   |
+| 6     |   ❌   |   ❌   |
+| 7     |   ❌   |   ❌   |
+| 8     |   ❌   |   ❌   |
+| 9     |   ❌   |   ❌   |
+| 10    |   ❌   |   ❌   |
+| 11    |   ❌   |   ❌   |
+| 12    |   ❌   |   ❌   |
+| 13    |   ❌   |   ❌   |
+| 14    |   ❌   |   ❌   |
+| 15    |   ❌   |   ❌   |
+| 16    |   ❌   |   ❌   |
+| 17    |   ❌   |   ❌   |
+| 18    |   ❌   |   ❌   |
+| 19    |   ❌   |   ❌   |
+| 20    |   ❌   |   ❌   |
+| 21    |   ❌   |   ❌   |
+| 22    |   ❌   |   ❌   |
+| 23    |   ❌   |   ❌   |
+| 24    |   ❌   |   ❌   |
+| 25    |   ❌   |   ❌   |
+---
+
 ### 🚀 Project Setup
 
 This project is written in Python and uses [Poetry](https://python-poetry.org/) for dependency management. It also includes a `Makefile` to simplify common tasks like testing, linting, and running solutions.
