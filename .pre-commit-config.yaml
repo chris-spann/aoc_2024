@@ -19,9 +19,11 @@ repos:
     rev: v1.1.389
     hooks:
     - id: pyright
+      additional_dependencies: [pytest]
   - repo: local
     hooks:
       - id: post-commit-action
-        name: Post-Commit Action
+        name: Update Progress in README
         language: system
-        entry: make update_progress
+        entry: bash -c 'make update_progress && git status --porcelain | grep -q "README.md" && git add README.md'
+        pass_filenames: false

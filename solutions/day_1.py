@@ -23,22 +23,18 @@ def part_1(lines: list[str]) -> int:
 
 
 def part_2(lines: list[str]):
-    print(lines)
-    return lines
-
-
-#     sum = 0
-#     left, right = get_lists(lines)
-#     for i in left:
-#         sum += right.count(i) * i
-#     print(sum)
-#     return sum
+    sum = 0
+    left, right = get_lists(lines)
+    for i in left:
+        sum += right.count(i) * i
+    print(sum)
+    return sum
 
 
 def main():
     lines = get_input(__file__)
     part_1(lines)
-    # part_2(lines)
+    part_2(lines)
 
 
 if __name__ == "__main__":  # pragma: no cover
