@@ -13,5 +13,5 @@ def get_input_file_path(script_path: str, filename: str = "input.txt") -> str:
     return file_path
 
 
-def get_input(script_path: str, file="day_1.txt"):
+def get_input(script_path: str, file="day_1_input.txt"):
     return read_file(get_input_file_path(script_path, file))

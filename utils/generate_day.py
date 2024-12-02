@@ -14,7 +14,7 @@ def create_file_from_template(template_path, new_file_path, day):
 
 
 def scrape_instructions(day):
-    url = f"https://adventofcode.com/2023/day/{day}"
+    url = f"https://adventofcode.com/2024/day/{day}"
     response = requests.get(url)
     if response.status_code == 200:
         soup = BeautifulSoup(response.text, "html.parser")
