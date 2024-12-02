@@ -1,4 +1,5 @@
 import os
+import re
 
 
 def read_file(filepath: str) -> list[str]:
@@ -13,5 +14,11 @@ def get_input_file_path(script_path: str, filename: str = "input.txt") -> str:
     return file_path
 
 
-def get_input(script_path: str, file="day_1_input.txt"):
-    return read_file(get_input_file_path(script_path, file))
+def get_input(script_path: str):
+    current_file_name = os.path.basename(script_path)
+    match = re.search(r"day_(\d+)\.py", current_file_name)
+    if match:
+        day = int(match.group(1))
+    else:
+        raise ValueError("Could not extract day number from file name")
+    return read_file(get_input_file_path(script_path, f"day_{day}_input.txt"))
