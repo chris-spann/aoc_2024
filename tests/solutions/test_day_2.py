@@ -17,7 +17,6 @@ def test_main(mocker, day_2_test_input, capfd):
     captured = capfd.readouterr()
     output = captured.out.splitlines()
     output = [int(line) for line in output]
-    print(f"output: {output}")
 
     assert output[0] == 2
     assert output[1] == 4

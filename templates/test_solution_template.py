@@ -9,13 +9,14 @@ def test_part_2():
     assert part_2([]) is not None
 
 
-def test_main(mocker):
+def test_main(mocker, capfd):
     mocker.patch("solutions.solution_template.get_input", return_value=[])
-    mock_stdout = mocker.patch("sys.stdout")
 
     main()
 
-    output = mock_stdout.getvalue().splitlines()
+    captured = capfd.readouterr()
+    output = captured.out.splitlines()
+    output = [int(line) for line in output]
 
     assert output[0] is not None
     assert output[1] is not None
