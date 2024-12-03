@@ -20,5 +20,5 @@ def test_get_input_file_path():
 def test_get_input(mocker):
     mocker.patch("builtins.open", mock_open(read_data="line1\nline2\nline3\n"))
     mocker.patch("utils.input_utils.get_input_file_path", return_value="dummy_path")
-    result = get_input("dummy_script_path")
+    result = get_input("day_2.py")
     assert result == ["line1\n", "line2\n", "line3\n"]

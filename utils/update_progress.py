@@ -76,22 +76,29 @@ def update_readme(progress):
 
 # Main function that runs everything
 def main():
-    commit_message = get_commit_message()  # Get the current commit message
+    try:
+        commit_message = get_commit_message()  # Get the current commit message
+        print(f"Commit message: {commit_message}")  # Debug: print commit message
 
-    # Check if the commit message matches the solved pattern
-    if "Completed Day" in commit_message:
-        print(f"Commit message detected: {commit_message}")
+        # Check if the commit message matches the solved pattern
+        if "Completed Day" in commit_message:
+            print(f"Commit message detected: {commit_message}")
 
-        # Parse the commit message and update the progress table
-        progress = parse_progress_from_commit(commit_message)
-        update_readme(progress)  # Update the README file with the new progress
+            # Parse the commit message and update the progress table
+            progress = parse_progress_from_commit(commit_message)
+            print(f"Progress: {progress}")  # Debug: print parsed progress
+            update_readme(progress)  # Update the README file with the new progress
 
+        else:
+            print("No progress found in commit message, skipping README update.")
+
+    except Exception as e:
+        print(f"Error: {e}")
+        sys.exit(1)  # Exit with failure on unexpected errors
+
+    finally:
         # Exit successfully
-        sys.exit(0)  # Pre-commit hook passes
-
-    else:
-        print("No progress found in commit message, skipping README update.")
-        sys.exit(0)  # Pre-commit hook passes
+        sys.exit(0)  # Always exit successfully
 
 
 # Run the script
