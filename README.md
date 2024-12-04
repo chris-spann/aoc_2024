@@ -10,7 +10,7 @@ Welcome to Advent of Code 2024! This repository contains my solutions to the dai
 | :----: | :----: | :----: |
 | 1     |   ✅   |   ✅   |
 | 2     |   ✅   |   ✅   |
-| 3     |   ❌   |   ❌   |
+| 3     |   ✅   |   ✅   |
 | 4     |   ❌   |   ❌   |
 | 5     |   ❌   |   ❌   |
 | 6     |   ❌   |   ❌   |
