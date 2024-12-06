@@ -20,10 +20,3 @@ repos:
     hooks:
     - id: pyright
       additional_dependencies: [pytest]
-  - repo: local
-    hooks:
-      - id: post-commit-action
-        name: Update Progress in README
-        language: system
-        entry: bash -c 'if [ "$CI" != "true" ]; then make update_progress || { echo "Failed to update progress"; exit 1; }; git status --porcelain | grep -q "README.md" && git add README.md; else echo "Skipping post-commit hook due to CI environment."; fi'
-        pass_filenames: false
