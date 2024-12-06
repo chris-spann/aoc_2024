@@ -37,3 +37,19 @@ def day_3_test_input_part_2():
     return [
         "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))\n",
     ]
+
+
+@pytest.fixture
+def day_4_test_input():
+    return [
+        "MMMSXXMASM\n",
+        "MSAMXMSMSA\n",
+        "AMXSXMAAMM\n",
+        "MSAMASMSMX\n",
+        "XMASAMXAMM\n",
+        "XXAMMXXAMA\n",
+        "SMSMSASXSS\n",
+        "SAXAMASAAA\n",
+        "MAMMMXMMMM\n",
+        "MXMXAXMASX\n",
+    ]
