@@ -40,7 +40,7 @@ select = [
 ]
 
 [tool.pytest.ini_options]
-addopts = "--cov=solutions --cov=utils --cov-report=term-missing"
+addopts = "-v -s --cov=solutions --cov=utils --cov-report=term-missing"
 pythonpath = ["."]
 norecursedirs = ["templates"]
 

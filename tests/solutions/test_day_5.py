@@ -1,12 +1,12 @@
 from solutions.day_5 import main, part_1, part_2
 
 
-def test_part_1():
-    assert part_1([]) is not None
+def test_part_1(day_5_test_input):
+    assert part_1(day_5_test_input) == 143
 
 
-def test_part_2():
-    assert part_2([]) is not None
+def test_part_2(day_5_test_input):
+    assert part_2(day_5_test_input) == 123
 
 
 def test_main(mocker, capfd):
