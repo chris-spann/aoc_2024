@@ -10,14 +10,14 @@ class Config(BaseModel):
 
     base_dir: Path = Field(default_factory=lambda: Path(__file__).resolve().parent.parent.parent)
     template_solution: Path = Field(
-        default_factory=lambda: Path(__file__).resolve().parent.parent.parent
-        / "templates"
-        / "solution_template.py"
+        default_factory=lambda: (
+            Path(__file__).resolve().parent.parent.parent / "templates" / "solution_template.py"
+        )
     )
     template_test: Path = Field(
-        default_factory=lambda: Path(__file__).resolve().parent.parent.parent
-        / "templates"
-        / "test_solution_template.py"
+        default_factory=lambda: (
+            Path(__file__).resolve().parent.parent.parent / "templates" / "test_solution_template.py"
+        )
     )
     instructions_dir: Path = Field(
         default_factory=lambda: Path(__file__).resolve().parent.parent.parent / "instructions"
